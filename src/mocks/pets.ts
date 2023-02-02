@@ -3,7 +3,6 @@ export class Pet {
   id: string;
   isAdopted: boolean;
   static generateId() {
-    // Este método genera un valor aleatorio muy grande, lo usamos tal cual sin plantearnos mucho.
     const aNumbers = new Uint32Array(1);
     crypto.getRandomValues(aNumbers);
     return ('000000' + aNumbers[0]).slice(-6);
